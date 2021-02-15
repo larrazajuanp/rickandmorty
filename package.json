@@ -1,0 +1,11 @@
+{
+  "name": "rickandmorty",
+  "version": "1.0.0",
+  "description": "Proyecto con la API de Rick and Morty",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Juan Pablo Larraza",
+  "license": "ISC"
+}
