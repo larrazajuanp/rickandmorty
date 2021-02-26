@@ -5,12 +5,20 @@
     width: 50%;
     margin: 0 auto;
 }
+#image-empty{
+    width: 50%;
+    margin: 0 auto;
+}
 .message{
     position: relative;
 }
 
 #message-title{
     font-size: 1.8rem;
+}
+
+#empty-input-message{
+    font-size: 1.7rem;
 }
 
 #btn-find{
@@ -29,3 +37,4 @@ background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);  /* Chr
 background: linear-gradient(to left, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
+
