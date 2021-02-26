@@ -14,7 +14,7 @@ _I use HTML, Tailwind CSS, JavaScript and install dependences via NPM._
 _I am Juan Pablo Larraza, I´m from Buenos Aires, Argentina. I´m UX/UI Designer and I´m learning MERN stack. In the nearly future I would like to work as a UX Developer, trying to solve digital problems by using UX techniques and develop them with React and Node._
 
 ## Test yourself
-_Visita el sitio web: https://rickandmorty-api-jpl.netlify.app/_
+_Take a tour by yourself: https://rickandmorty-api-jpl.netlify.app/_
 
 ## Author ✒️
 
