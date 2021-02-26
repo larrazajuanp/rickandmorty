@@ -51,12 +51,12 @@ const showMessage = () => {
 const nodeCreation = ({ image, name, species, id }) => {
     const node = `
                 <!-- Column -->
-                <div class="md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3" id="${id}">
+                <div class="my-4 mr-0 md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3" id="${id}">
         
                     <!-- Article -->
                         <article class="overflow-hidden rounded-lg shadow-lg">
                         
-                        <img alt="Placeholder" class="block h-auto w-full" src="${image}"> 
+                        <img alt="Character" class="block h-auto w-full" src="${image}"> 
                         
                         <header class="flex items-center justify-between leading-tight p-2 md:p-4">
                             <h1 class="text-lg" id="${name}">${name}</h1>
@@ -73,10 +73,6 @@ const nodeCreation = ({ image, name, species, id }) => {
 
 }
 
-const close = (e) => {
-    console.log(e.target)
-    console.log('caca')
-}
 
 // Funcion encargada de mostrar el personaje seleccionado desde el input
 const showCharacter = ({ image, name, species, id }) => {
@@ -105,8 +101,6 @@ const showCharacter = ({ image, name, species, id }) => {
     document.querySelector('.modal').insertAdjacentHTML('beforeend', modalCharacter);
 }
 
-
-
 // Funcion encargada de buscar un personaje por nombre
 const searchCharacters = (e) => {
     e.preventDefault()
@@ -115,9 +109,29 @@ const searchCharacters = (e) => {
     const foundCharacter = characters.find(character => character.name.toLowerCase() === nameValue.toLowerCase())
     //iterateCharacters(foundCharacter)
     showCharacter(foundCharacter)
+    return foundCharacter;
 }
 
 
+
+// Función encargada de mostrar mensaje si escribio cualquier cosa menos nombre del personaje
+const notFoundCharacter = (e) => {
+    if (e.key === 'Enter') {
+        const value = inputSearch.value;
+        if (value == '' && value !== showCharacter(foundCharacter)) {
+            showEmptyMessage()
+        }
+    }
+}
+
+const showEmptyMessage = () => {
+    document.querySelector('#empty-input-message').innerHTML = '¡Please enter a character name on the input field!';
+    document.getElementById('image-empty').style.display = 'block';
+    btnFind.style.display = 'block';
+    document.getElementById('form').style.display = 'none';
+}
+
+inputSearch ? inputSearch.addEventListener('keypress', notFoundCharacter) : null;
 
 // Itera los personajes
 const iterateCharacters = (characters) => {
