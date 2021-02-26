@@ -118,7 +118,7 @@ const searchCharacters = (e) => {
 const notFoundCharacter = (e) => {
     if (e.key === 'Enter') {
         const value = inputSearch.value;
-        if (value == '' && value !== showCharacter(foundCharacter)) {
+        if (value == '') {
             showEmptyMessage()
         }
     }
